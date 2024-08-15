@@ -220,7 +220,7 @@ class Controls:
     self.mpc_frame_sr = 0
 
     self.steerRatio_Max = float(Decimal(self.params.get("SteerRatioMaxAdj", encoding="utf8")) * Decimal('0.01'))
-    self.steer_angle_range = [5, 90]
+    self.steer_angle_range = [5, 160]
     self.steerRatio_range = [self.CP.steerRatio, self.steerRatio_Max]
     self.new_steerRatio = self.CP.steerRatio
     self.new_steerRatio_prev = self.CP.steerRatio
