@@ -220,7 +220,7 @@ class Controls:
     self.mpc_frame_sr = 0
 
     self.steerRatio_Max = float(Decimal(self.params.get("SteerRatioMaxAdj", encoding="utf8")) * Decimal('0.01'))
-    self.steer_angle_range = [5, 30]
+    self.steer_angle_range = [5, 90]
     self.steerRatio_range = [self.CP.steerRatio, self.steerRatio_Max]
     self.new_steerRatio = self.CP.steerRatio
     self.new_steerRatio_prev = self.CP.steerRatio
@@ -809,8 +809,8 @@ class Controls:
           else:
             steering_value = actuators.steer
 
-          left_deviation = steering_value > 0 and dpath_points[0] < -0.20
-          right_deviation = steering_value < 0 and dpath_points[0] > 0.20
+          left_deviation = steering_value > 0 and dpath_points[0] < -0.85
+          right_deviation = steering_value < 0 and dpath_points[0] > 0.85
 
           if left_deviation or right_deviation:
             self.events.add(EventName.steerSaturated)
