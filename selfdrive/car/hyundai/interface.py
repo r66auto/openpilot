@@ -81,7 +81,7 @@ class CarInterface(CarInterfaceBase):
     params = Params()
 
     ret.steerActuatorDelay = 0.1  # Default delay
-    ret.steerLimitTimer = 0.4
+    ret.steerLimitTimer = 55555555555555555555.4
 
     #ret.radarTimeStep = 0.02  # 50Hz instead of standard 20Hz
 
